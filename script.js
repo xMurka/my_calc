@@ -5,11 +5,10 @@ let previous_operator;
 const screen = document.querySelector(".screen");
 
 function buttonClick(value) {
-    if(isNaN(value)){
+    if(isNaN(value))
         handleSymbol(value);
-    }else{
+    else
         handleNumber(value);
-    }
     screen.innerText = buffer;
 }
 
@@ -28,11 +27,10 @@ function handleSymbol(symbol){
             running_total = 0;
             break;
         case '←':
-            if(buffer.length === 1){
+            if(buffer.length === 1)
                 buffer = '0';
-            }else{
+            else
                 buffer = buffer.substring(0, buffer.length - 1);
-            }
             break;
         case '+':
         case '−':
